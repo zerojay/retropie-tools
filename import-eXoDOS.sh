@@ -173,7 +173,7 @@ for DIR in "${DIRLIST[@]}"; do
 				echo -e "\t</game>" >> "${GAMELIST}"
 				
 				# ----- Create script for RetroPie
-				SCRIPT="~/RetroPie/roms/pc/${GAME,,}.sh"
+				SCRIPT="/home/pi/RetroPie/roms/pc/${GAME,,}.sh"
 				echo "#!/bin/bash" > "${SCRIPT}"
 				echo "/opt/retropie/emulators/dosbox/bin/dosbox -conf /opt/retropie/configs/pc/dosbox-SVN.conf -conf ${AUTOEXEC} -exit" >> "${SCRIPT}"
 				chmod a+x "${SCRIPT}"
